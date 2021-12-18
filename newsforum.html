@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿠팟</title>
+    <link rel="stylesheet" href="css/scoopot1.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo top">
+                <a href="main.html" target="_self"><img src="image/scoopot.png" width="150"></a>
+            </div>
+            
+            <div class="searchdiv top">
+                <input type="search" id="search">
+                <input type="image" id="searchbutton" src="image/searchbutton.png">  
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="menu">
+          <li><a href="newsforum.html">뉴스게시판</a></li>
+          <li><a href="generalforum.html">자유게시판</a></li>
+          <li><a href="discussionforum.html">토론게시판</a></li>
+          <li><a href="moreforums.html">게시판 더보기</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="forumcontents">
+            <div>
+        <h1>뉴스게시판</h1>
+    </div>
+
+        <div id="forumtable">
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                    <th>추천수</th>
+                </tr>
+                <script>
+                    var news1=['1','뉴스게시판','박준호','2021-12-17','1','0'],
+                    news2=['2','뉴스게시판','박준호','2021-12-17','1','0'],
+                    news3=['2','뉴스게시판','박준호','2021-12-17','1','0'],
+                    news4=['4','뉴스게시판','박준호','2021-12-17','1','0'],
+                    news5=['5','뉴스게시판','박준호','2021-12-17','1','0'];
+                    for(i=5;i>0;i--){
+                        document.write("<tr>");
+                        for(j=0;j<6;j++){
+                            if (j==1) {
+                                document.write("<td><a href=\"news/news"+i+".html\">"+eval("news"+i+"[1]")+"</a></td>");
+                            } else {
+                                document.write("<td>"+eval("news"+i+"["+j+"]")+"</td>");
+                            }                
+                        }
+                        document.write("</tr>")
+                    }
+                </script>
+            </table>
+        </div>
+        <div id="pagebuttons">
+            <ul class="page">
+                <li><a href="#">이전</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">다음</a></li>
+            </ul>
+            <div>
+                <button onclick="location.href='writing.html'">글쓰기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
