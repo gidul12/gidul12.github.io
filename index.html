@@ -5,228 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스쿠팟</title>
-    <style>
-
-        header {
-            margin: 0px auto;
-        }                
-        .top {
-            width: 100; 
-            margin-left: 10px;
-            display: flex;
-            align-items: center;
-        }
- 
-        .container {
-            width: 400px;
-            height: 60px;
-            margin: 0px auto;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .searchdiv {
-            margin-bottom: 5px;
-            margin-left: 20px;
-            border: 2px solid #3e47cccc;
-        }
-        .searchdiv input:focus {outline:none;}
-        
-        #search {
-            font-size: 10px;
-            width: 200px;
-            border: none;
-        }
-        #searchbutton {
-            width: 17.2px;
-            padding: 1px;
-            margin-left: 2px;
-        }
-
-
-        nav {
-            text-align: center;
-            height:35px;
-            box-shadow:0 3px 4px #8b8b8b;
-            background-color:#3e47cccc;
-            white-space: nowrap;
-            margin-top: -10px;
-        }
-
-        .menu li {
-            list-style: none;
-            display: inline-block;
-            border-right:1px solid #929292;
-            margin: auto -2.9px;
-        }
-        .menu li a:link {
-            display: inline-block;
-            color:white;
-            text-decoration:none;
-            text-align:center;
-            width:150px;
-            height:35px;
-            line-height: 35px;
-        }
-        .menu li:first-child {
-            border-left: 1px solid #929292;
-        }
-        .menu li a:visited {
-            color:white;
-        }
-        .menu li a:hover {
-            background-color:#3e47cc;
-        }
-        section {
-            margin-top: 20px;
-        }
-        #hotissuebox {
-            width: 800px;
-            height: 420px;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
-            margin: 5px;
-            padding: 10px;
-        }
-        #hotpostbox {
-            width: 1030px;
-            height: 460px;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
-            margin: 5px;
-            padding: 10px;
-        }
-        #login_searchrank {
-            width: 200px;
-            height: 420px;
-            border: 1px solid #dddddd;
-            border-radius: 10px;
-            margin: 5px;
-            padding: 10px;
-        }
-        .uppersection , .lowersection {
-            display: flex;
-            justify-content: center;
-        }
-        fieldset {
-            white-space: nowrap;
-            border: 1px solid #999999;
-        }
-        fieldset label {
-            display: inline-block;
-            font-size: 8px;
-            position: relative;
-            top: 3px;
-            left: -3px;
-        }
-        #IDsave {
-            position: relative;
-            top: 2.5px;
-        }
-        #loginbutton {
-            position: relative;
-            top: 6px;
-        }
-        #belowbuttons {
-            margin-top: 10px;
-            margin-bottom: -5px;
-            padding: 5px;
-            font-size:8px;
-            border-top: 1px solid #dddddd;
-        }
-        #belowbuttons a {
-            text-decoration: none;
-            color: black;
-        }
-        #belowbuttons a:hover {
-            text-decoration: underline;
-        }
-        #belowbuttons a:first-child{
-            margin-right : 10px 
-        }
-        #searchrankdiv {
-            border: 1px solid #999999;
-            width: 194px;
-            height: 300px;
-            margin: 10px auto;
-        }
-        #searchrank {
-            margin: 5px 5px;
-            width: 180px;
-            font-size: 10px;
-        }
-        #searchrank caption {
-            text-align: center;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #dddddd;
-        }
-        #searchrank tr {
-            margin: 20px 0px;
-        }
-        #hotissuebutton{
-            width: 800px;
-            height: 40px;
-            padding-bottom: 10px;
-            border-bottom:1px solid #dddddd;
-        }
-        #hotpostbutton {
-            width: 1100px;
-            height: 40px;
-            padding-bottom: 10px;
-            border-bottom:1px solid #dddddd;
-        }
-        #hotissueTables, #hotpostTables {
-            display: flex;
-            margin-top: 10px;
-        }
-
-        .ranktables a {
-            color: black;
-            text-decoration: none;
-        }
-        .ranktables a:visited {
-            color: #3e47cc;
-        }
-        .ranktables div {
-            width: 320px ;
-            margin: 20px 10px 30px 20px;
-            font-size: 12px;
-        }
-
-        .ranktables table tr {
-            width: 340px;
-            height: 30px;
-        }
-        .ranktables table tr td:first-child {
-            width: 30px;
-        }
-        #likeitrank {
-            margin: 5px 5px;
-            width: 180px;
-            font-size: 10px;
-        }
-        .emotionpic {
-            margin: 0px 0px -10px 30px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/scoopot1.css">
 </head>
 <body>
     <script>
         var hotissue = ['2016114880 박준호 스쿠팟사이트 개설','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
         var realtimerank = ['웹','프로그래밍','html','css','자바','기말','프로젝트','실시간','검색어','순위'];
-        var likeit = ['좋아요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
-        var funny = ['웃겨요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
-        var amazing = ['신기해요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
-        var angry = ['화나요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
-        var sad = ['슬퍼요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
-        var scary = ['무서워요','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t'];
+        var likeit = ['좋아요','b','c','d','e','f','g','h','i','j'];
+        var funny = ['웃겨요','b','c','d','e','f','g','h','i','j'];
+        var amazing = ['신기해요','b','c','d','e','f','g','h','i','j'];
+        var angry = ['화나요','b','c','d','e','f','g','h','i','j'];
+        var sad = ['슬퍼요','b','c','d','e','f','g','h','i','j'];
+        var scary = ['무서워요','b','c','d','e','f','g','h','i','j'];
     </script>
     <header>
         <div class="container">
             <div class="logo top">
-                <a href="main.html" target="_self"><img src="image/scoopot.png" width="150"></a>
+                <a href="https://gidul12.github.io/#" target="_self"><img src="image/scoopot.png" width="150"></a>
             </div>
             
             <div class="searchdiv top">
@@ -238,10 +33,10 @@
     
     <nav>
         <ul class="menu">
-          <li><a href="#">뉴스게시판</a></li>
-          <li><a href="#">자유게시판</a></li>
-          <li><a href="#">토론게시판</a></li>
-          <li><a href="#">게시판 더보기</a></li>
+          <li><a href="https://gidul12.github.io/newsforum.html">뉴스게시판</a></li>
+          <li><a href="https://gidul12.github.io/newsforum.html">자유게시판</a></li>
+          <li><a href="https://gidul12.github.io/newsforum.html">토론게시판</a></li>
+          <li><a href="https://gidul12.github.io/newsforum.html">게시판 더보기</a></li>
         </ul>
     </nav>
     <section class="uppersection">

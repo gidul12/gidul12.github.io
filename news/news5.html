@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿠팟</title>
+    <link rel="stylesheet" href="../css/scoopot1.css">
+    <style>
+        .postcontainer {
+            margin: 0px 0px 0px 400px;
+            width: 900px;
+            text-align: left;
+        }
+        .postcontents {
+            border-top: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 50px;
+        }
+        .recommendbuttons {
+            width: 200px;
+            margin: 20px 0px 20px 350px;
+    
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo top">
+                <a href="../main.html" target="_self"><img src="../image/scoopot.png" width="150"></a>
+            </div>
+            
+            <div class="searchdiv top">
+                <input type="search" id="search">
+                <input type="image" id="searchbutton" src="../image/searchbutton.png">  
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="menu">
+          <li><a href="../newsforum.html">뉴스게시판</a></li>
+          <li><a href="../generalforum.html">자유게시판</a></li>
+          <li><a href="../discussionforum.html">토론게시판</a></li>
+          <li><a href="../moreforums.html">게시판 더보기</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="forumcontents">
+        <h1>뉴스게시판</h1>
+    </div>
+    <div class="postcontainer">
+        <h4>작성자 : 박준호</h4>
+        <h4>작성일 : 2021-12-17</h4>
+        <h4>조회 : 1</h4>
+        <h4>추천 : 0</h4>
+        <h4>제목 : 뉴스게시판</h4>
+        <div class="postcontents">
+            <p>뉴스게시판 내용 테스트입니다.</p>
+        </div>
+        <div class="recommendbuttons">
+            <button type="button">추천</button>
+            <button type="button">비추천</button>
+        </div>
+        <div class="comments">
+            <textarea id="comments" placeholder="댓글 달기" cols="110" rows="2" required></textarea>
+            <button type="submit">작성</button>
+        </div>
+    </div>
+
+</body>
+</html>
